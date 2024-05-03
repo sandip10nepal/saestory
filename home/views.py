@@ -81,7 +81,7 @@ def account(request):
         messages.info(request, 'Account created successfully')
         return redirect('/login')
 
-    return render(request, 'login.html')
+    return render(request, 'account.html')
 
 
 

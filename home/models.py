@@ -41,10 +41,11 @@ class Rating(models.Model):
     value = models.IntegerField(choices=[(i, i) for i in range(1, 6)])  # Rating from 1 to 5
 
     class Meta:
-        unique_together = (('user', 'stories'),)  # Each user can rate a stories only once
+        unique_together = (('user', 'story'),)  # Each user can rate a story only once
 
     def __str__(self):
         return f'{self.user.username} rated {self.story.Title} {self.value} stars'
+
 
 
 class Mywords(models.Model):
